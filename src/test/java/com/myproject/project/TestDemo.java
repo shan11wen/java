@@ -2,10 +2,13 @@ package com.myproject.project;
 
 import com.alibaba.fastjson.JSONObject;
 import com.myproject.project.model.HotListDto;
+import lombok.Data;
 import org.junit.jupiter.api.Test;
+import org.springframework.util.ObjectUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @ClassName TestDemo
@@ -57,5 +60,29 @@ public class TestDemo {
         for (HotListDto listDto : list) {
             System.out.println("listDto = " + listDto.toString());
         }
+    }
+
+    @Test
+    public void e() {
+        String s = null;
+        String w = null;
+
+        if (Objects.equals(s, w)) {
+            System.out.println("success");
+        }
+    }
+
+    @Test
+    public void dee() {
+        List<people> people = new ArrayList<>();
+        people.forEach(people1 -> people1.setAge(1));
+
+    }
+
+    @Data
+    public class people{
+        private String name;
+
+        private Integer age;
     }
 }
