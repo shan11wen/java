@@ -6,9 +6,7 @@ import lombok.Data;
 import org.junit.jupiter.api.Test;
 import org.springframework.util.ObjectUtils;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * @ClassName TestDemo
@@ -84,5 +82,14 @@ public class TestDemo {
         private String name;
 
         private Integer age;
+    }
+
+
+    @Test
+    public void mapTest() {
+        Map<Integer, Boolean> map = new HashMap<>();
+        if (map.get(1) == null) {
+            System.out.println("success");
+        }
     }
 }
